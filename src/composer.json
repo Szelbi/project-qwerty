@@ -1,5 +1,18 @@
 {
+    "type": "project",
+    "name": "projects/qwerty",
+    "description": "qwerty",
     "require": {
+        "php": "^8.1",
         "ramsey/uuid": "^4.4"
+    },
+    "require-dev": {
+        "composer/composer": "^2.3"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
     }
 }
