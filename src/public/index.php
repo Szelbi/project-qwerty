@@ -1,9 +1,15 @@
 <?php
 
-declare(strict_types = 1);
+use Ramsey\Uuid\UuidFactory;
+
+require __DIR__ . '/../vendor/autoload.php';
+
+
+$id = new UuidFactory();
+echo $id->uuid4();
+
+
 
 phpinfo();
-
-echo '<pre>';
 print_r($_SERVER);
-echo '<pre>';
+
