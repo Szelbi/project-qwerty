@@ -1,6 +1,6 @@
 {
     "type": "project",
-    "name": "projects/qwerty",
+    "name": "project/qwerty",
     "description": "qwerty",
     "require": {
         "php": "^8.1",
