@@ -1,5 +1,9 @@
 FROM php:8.1.9-fpm
 
+LABEL name="qwerty image" \
+desctiption="Docker Image for qwerty project" \
+version="0.1"
+
 RUN apt-get update
 RUN apt-get install -y git curl zip unzip vim nano htop wget mc
 
