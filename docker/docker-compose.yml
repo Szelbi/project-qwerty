@@ -20,3 +20,21 @@ services:
     volumes:
       - ../app:/var/www/app
       - ./nginx:/etc/nginx/conf.d
+
+  db:
+    image: postgres:14-alpine
+    container_name: project-qwerty-postgres
+    restart: always
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_PASSWORD: P@ssw0rd
+      POSTGRES_USER: postgres
+    volumes:
+      - db-postgres-data:/var/lib/postgresql/data:rw
+      # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!
+      # - ./docker/db/data:/var/lib/postgresql/data:rw
+
+volumes:
+  db-postgres-data:
