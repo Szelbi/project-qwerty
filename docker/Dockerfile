@@ -1,3 +1,4 @@
+# docker build -t php-fpm-image:dev .
 FROM php:8.1.9-fpm
 
 WORKDIR /var/www/app
@@ -17,7 +18,7 @@ RUN mv composer.phar /usr/local/bin/composer
 
 ## INSTALL Symfony CLI
 RUN curl -sS https://get.symfony.com/cli/installer | bash
-RUN mv /root/.symfony/bin/symfony /usr/local/bin/symfony
+RUN mv /root/.symfony5/bin/symfony /usr/local/bin/symfony
 
 ## GIT
 RUN git config --global user.email "dawidgos25@gmail.com" \
