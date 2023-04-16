@@ -2,10 +2,10 @@ version: '3.6'
 
 services:
   app:
-    build:
-      context: ./
-      dockerfile: Dockerfile
+    image: 'php-fpm-image:dev'
     container_name: project-qwerty-app
+    ports:
+      - '81:80'
     restart: on-failure
     working_dir: /var/www/app
     volumes:
