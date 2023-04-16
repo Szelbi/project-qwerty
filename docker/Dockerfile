@@ -15,6 +15,14 @@ RUN php composer-setup.php
 RUN php -r "unlink('composer-setup.php');"
 RUN mv composer.phar /usr/local/bin/composer
 
+## INSTALL Symfony CLI
+RUN curl -sS https://get.symfony.com/cli/installer | bash
+RUN mv /root/.symfony/bin/symfony /usr/local/bin/symfony
+
+## GIT
+RUN git config --global user.email "dawidgos25@gmail.com" \
+    && git config --global user.name "dgos"
+
 ## COPY FILES
 RUN rm /root/.bashrc
 ADD copy_files/.bashrc /root/.bashrc
