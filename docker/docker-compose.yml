@@ -16,7 +16,7 @@ services:
     container_name: qwerty-nginx
     restart: always
     ports:
-      - 8000:80
+      - 8005:80
     volumes:
       - ../app:/var/www/
       - ./nginx:/etc/nginx/conf.d
